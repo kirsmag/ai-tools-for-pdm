@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f3ed">
+    <title>Кто выгуливает Бориса</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="page-header">
+        <p class="eyebrow">Догяндекс · офисная жизнь</p>
+        <h1>Кто выгуливает <span>Бориса</span>?</h1>
+        <p class="intro">Посмотрите, какие прогулки свободны сегодня, и узнайте, кто покормил Бориса последним.</p>
+      </header>
+
+      <section class="walk-section" aria-labelledby="walk-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">План на сегодня</p>
+            <h2 id="walk-title">Прогулки</h2>
+          </div>
+          <p class="date-label" id="current-date" aria-live="polite">Загружаем дату…</p>
+        </div>
+        <p class="load-error" id="load-error" role="alert" hidden>Не удалось загрузить расписание. Обновите страницу.</p>
+        <ol class="slot-list" id="slot-list" aria-label="Слоты прогулок" aria-busy="true"></ol>
+        <p class="booking-message" id="booking-message" role="status" aria-live="polite" hidden></p>
+        <form class="booking-form" id="booking-form" hidden>
+          <div class="booking-form-heading">
+            <p class="eyebrow">Запись на прогулку</p>
+            <p class="booking-choice" id="booking-choice"></p>
+          </div>
+          <label for="employee-name">Ваше ФИО</label>
+          <input id="employee-name" name="employeeName" type="text" maxlength="120" autocomplete="off" placeholder="Например, Анна Тестова" required>
+          <p class="form-hint">Используйте синтетическое имя.</p>
+          <div class="form-actions">
+            <button class="submit-button" type="submit">Подтвердить запись</button>
+            <button class="cancel-button" id="cancel-booking" type="button">Отмена</button>
+          </div>
+        </form>
+      </section>
+
+      <aside class="feeding-card" aria-labelledby="feeding-title">
+        <div class="feeding-icon" aria-hidden="true">♥</div>
+        <div class="feeding-copy">
+          <p class="eyebrow">Забота о Борисе</p>
+          <h2 id="feeding-title">Последнее кормление</h2>
+          <p class="feeding-detail" id="feeding-detail" aria-live="polite">Загружаем…</p>
+        </div>
+        <form class="feeding-form" id="feeding-form">
+          <label for="feeding-name">Отметить кормление</label>
+          <div class="feeding-entry">
+            <input id="feeding-name" name="employeeName" type="text" maxlength="120" autocomplete="off" placeholder="Например, Илья Примеров" required>
+            <button class="feeding-submit" type="submit">Сохранить</button>
+          </div>
+          <p class="form-hint">Используйте синтетическое имя.</p>
+          <p class="feeding-message" id="feeding-message" role="status" aria-live="polite" hidden></p>
+        </form>
+      </aside>
+
+      <footer class="page-footer">Учебный проект · все имена вымышленные</footer>
+    </main>
+  </body>
+</html>

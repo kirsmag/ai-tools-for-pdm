@@ -1,0 +1,12 @@
+{
+  "name": "who-walks-boris",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Учебный micro-MVP для прогулок и кормления Бориса",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  }
+}
