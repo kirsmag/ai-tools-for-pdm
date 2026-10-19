@@ -80,6 +80,7 @@ h2 { margin-bottom: 0; font-size: 23px; font-weight: 700; letter-spacing: -.035e
 .slot-time { min-width: 62px; color: var(--ink); font-family: 'Avenir Next', Avenir, 'Segoe UI', sans-serif; font-size: 19px; font-weight: 700; letter-spacing: -.035em; }
 .slot-state { display: flex; min-width: 0; align-items: center; justify-content: flex-end; gap: 9px; color: #69756a; font-size: 13px; text-align: right; }
 .slot-state span:last-child { overflow-wrap: anywhere; }
+.slot-card.is-available .slot-state span:last-child { white-space: nowrap; }
 .slot-card.is-booked .slot-state { color: #6d6255; }
 .state-dot { width: 7px; height: 7px; flex: 0 0 7px; border-radius: 50%; background: #78a17e; }
 .is-booked .state-dot { background: #c18d4f; }
@@ -126,7 +127,7 @@ h2 { margin-bottom: 0; font-size: 23px; font-weight: 700; letter-spacing: -.035e
 .feeding-icon { display: grid; width: 48px; height: 48px; flex: 0 0 48px; place-items: center; border-radius: 15px; background: #d7e2d2; color: #4d7459; font-size: 23px; }
 .feeding-copy .eyebrow { margin-bottom: 5px; }
 .feeding-copy h2 { margin-bottom: 5px; font-size: 18px; }
-.feeding-detail { margin: 0; color: #657066; font-size: 13px; line-height: 1.5; }
+.feeding-detail { margin: 0; color: #657066; font-size: 13px; line-height: 1.5; overflow-wrap: anywhere; }
 .feeding-form { min-width: 0; }
 .feeding-form label { display: block; margin-bottom: 7px; color: #4c5b4e; font-size: 12px; font-weight: 700; }
 .feeding-entry { display: flex; gap: 7px; }
